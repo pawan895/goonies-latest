@@ -23,6 +23,8 @@ body {
   display: flex;
   height: 100vh;
   pointer-events: auto;
+  z-index: 20;
+  
 }
 
 .characters div {
@@ -76,4 +78,22 @@ body {
 
 .characters div:hover img {
   transform: scale(1.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 47vh);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #fff; /* White thin border */
+}
+.grid-item:nth-child(3) {
+  grid-column: span 2; /* Make this item span 2 columns */
 }

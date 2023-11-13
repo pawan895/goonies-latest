@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Parallax } from 'react-parallax';
 import './App.css';
 import Header from './components/Header';
+import Grid from './components/Grid';
 import Plx from "react-plx";
 
 function App() {
@@ -11,46 +12,14 @@ function App() {
 
   return (
     <>
-      {/* <Header></Header>
-        <div style={{
-          backgroundImage: "url('Images/hero.jpg')"
-        }}>
-        <Parallax
-          blur={1}
-          bgImage="Images/background-min.png"
-          bgImageAlt="The background Image"
-          strength={100}
-          style={{
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            transform: `scale(${scale})`,
-            transition: 'transform 0.3s ease-in-out',
-          }}
-          onScroll={handleScroll}
-        >
-          <img src="Images/logo.png" alt="" height={100} style={{margin: "0 auto"}}/>
-        </Parallax>
-        </div>
-        
 
-        
-          <Parallax
-            bgImage="Images/hero.jpg"
-            bgImageAlt="The background Image"
-            strength={200}
-            style={{
-              height: '100vh',
-            }}
-          ></Parallax> */}
 
       <Header></Header>
 
       <Plx
         parallaxData={[{
           start: 0,
-          end: 400,
+          end: "300",
           properties: [
             {
               startValue: 1,
@@ -74,7 +43,7 @@ function App() {
         style={{
           position: 'fixed',
           width: '100%',
-          zIndex: 200
+          zIndex: 1
 
         }}
 
@@ -85,7 +54,7 @@ function App() {
       </Plx>
       <Plx
         parallaxData={[{
-          start: 450,
+          start: 550,
           end: 700,
           properties: [
             {
@@ -115,7 +84,7 @@ function App() {
         }
         ]}>
         <img src="Images/hero.jpg" alt="bakground Image" />
-        <img src="Images/scroll.gif" alt="Scroll down" style={{ position: 'fixed', bottom: "4vh", left: "50vw", zIndex: 120, height: 60 }} />
+        <img src="Images/scroll.gif" alt="Scroll down" style={{ position: 'fixed', bottom: "4vh", left: "47vw", zIndex: 120, height: 60 }} />
       </Plx>
 
 
@@ -204,7 +173,9 @@ function App() {
         ]}
         style={{
           backgroundColor: '#fffff',
-          height: '100vh'
+          height: '100vh',
+          position: 'relative',
+          zIndex: 2
         }}
       >
         <div className='characters'>
@@ -227,6 +198,9 @@ function App() {
 
         </div>
       </Plx>
+      <div>
+
+      </div>
       <Plx
         parallaxData={[{
           start: 0,
@@ -248,15 +222,129 @@ function App() {
           alignItems: "center",
         }}
       >
-        <img src="Images/coin.png" alt="" width={150}/>
+        <img src="Images/coin.png" alt="" width={150} />
         <img src="Images/coin-3.png" alt="" width={150} />
-
         <img src="Images/key-min.png" alt="" width={150} />
         <img src="Images/coin-1.png" alt="" width={150} />
         <img src="Images/coin-3.png" alt="" width={150} />
 
 
       </Plx>
+      <Plx
+        parallaxData={[{
+          start: 0,
+          end: 400,
+          properties: [
+            {
+              startValue: 0,
+              endValue: 360,
+              property: "translate",
+            },
+          ],
+        }
+        ]}
+        style={{
+          height: '100vh',
+
+        }}
+      >
+        <div class="grid-container">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+          <div class="grid-item">Item 5</div>
+          <div class="grid-item">Item 6</div>
+          <div class="grid-item">Item 7</div>
+        </div>
+
+
+      </Plx>
+
+
+      <Plx
+        parallaxData={[{
+          start: 1800,
+          end: 2000,
+          properties: [
+            {
+              startValue: 0,
+              endValue: 1,
+              property: "scale",
+            },
+          ],
+        }
+        ]}
+
+        style={{
+          height: '100vh',
+          width: '100vw',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          margin: '0 auto',
+          zIndex: 10,
+          position: 'relative',
+          top: '40%',
+          left: '40%',
+          transform: "translate(-50 %, -50 %)",
+          filter: 'grayscale(100%)'
+
+        }}
+      >
+        <img src="Images/skull.png" alt="" width={'20%'} style={{ filter: 'grayscale(100%)' }} />
+        <img src="Images/last-part.png" alt="" width={'30%'} />
+      </Plx>
+      <Plx
+        parallaxData={[{
+          start: 1800,
+          end: 2000,
+          properties: [
+            {
+              startValue: 0,
+              endValue: 1,
+              property: "scale",
+            },
+          ],
+        }
+        ]}>
+
+        <Grid></Grid>
+
+      </Plx>
+      <Plx
+        parallaxData={[{
+          start: 1800,
+          end: 2000,
+          properties: [
+            {
+              startValue: 0,
+              endValue: 1,
+              property: "scale",
+            },
+          ],
+        }
+        ]}
+        style={{
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'white',
+          height: '100vh',
+          textAlign: 'center'
+        }}
+      >
+        <div>
+          <h1>The goonies Latest</h1>
+          <br />
+          <h3>Made by Pawan</h3>
+        </div>
+
+
+      </Plx>
+
 
 
     </>
