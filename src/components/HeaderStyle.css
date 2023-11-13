@@ -1,15 +1,19 @@
-.Header{
- padding: 30px 100px;
- display: flex;
- justify-content: space-between;
- z-index: 100;
+.Header {
+    padding: 30px 100px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1500;
+    display: flex;
+    justify-content: space-between;
 
- 
-}
-.nav-elements{
- text-decoration: none;
- font-weight: 500;
- font-size: large;
- color: #fff;
 }
 
+.nav-elements {
+    font-family: "Sharp Grotesk Book 25 Regular";
+    text-decoration: none;
+    font-weight: 500;
+    font-size: small;
+    color: #fff;
+
+}
